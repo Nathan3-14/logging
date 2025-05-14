@@ -1,12 +1,12 @@
 import os
 from typing import Literal
-import tomlib
+import tomllib
 
 
 class Logger:
     def __init__(self, config_path: str) -> None:
-        toml
-        pass
+        self.config_data = tomllib.load(open(config_path, "rb"))
+        
     
     def log(self, message: str, type: Literal["info", "warn", "error", "important"]) -> None:
         pass
